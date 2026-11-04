@@ -1,0 +1,153 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* This is a comment in CSS */
+
+/**************************************************
+
+                    MAIN STYLES
+
+***************************************************/
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+}
+
+/* . targets classes or a class */
+.container {
+    /* stops the site from stretching forever */
+    max-width: 900px;
+    background-color: #bfccff;
+
+    /* centers the site in the browser window */
+    margin: 0 auto;
+    /* when you give margin two values, it means: */
+    /* top and bottom, left and right */
+    /* margin: 0 auto automatically centers the site in the browser window */
+
+}
+
+h1 {
+    font-size: 36px;
+    color: darkred;
+    background-color: aqua;
+    /* margin is the space around an element, or between elements. */
+    margin-bottom: 10px;
+    /* padding is the space inside an element, it pushes content away from the edge. */
+    padding: 10px;
+}
+
+/**************************************************
+
+                    MOBILE STYLES
+
+***************************************************/
+
+/* style the tags inside the nav only */
+nav a {
+    /* make the anchor tags block elements (so they behave like divs) */
+    display: block;
+    background-color: goldenrod;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+
+    padding: 10px;
+    text-align: center;
+
+    /* remove the underline from the links */
+    text-decoration: none;
+}
+
+/* hover for anything with a cursor, active for touchscreen */
+nav a:hover {
+    background-color: gold;
+    color: darkred;
+}
+
+nav a:active {
+    background-color: darkred;
+    color: gold;
+}
+
+/**************************************************
+
+                   MEDIA QUERIES
+
+***************************************************/
+
+@media screen and (min-width: 720px) {
+    /* only apply these styles if the screen is at least 720px width (minimum) or larger */
+    nav a {
+        float: left;
+        width: 25%;
+        /* use box-sizing */
+        box-sizing: border-box;
+    }
+
+    main {
+        /* so it sits under the floated stuff */
+        clear:both;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /* only apply these styles if the screen is at least 900px width (minimum) or larger */
+    nav a {
+        background-color: chartreuse;
+    }
+}
+
+/* fork codepen first for the assignment!! */
